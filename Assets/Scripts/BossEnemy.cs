@@ -137,7 +137,13 @@ public class BossEnemy : MonoBehaviour, IHittable
         if (IsDead)
         {
             meteor.SetActive(false); 
-            Destroy(gameObject);
+            
+            StopCoroutine(UpdatePath());
+            Destroy(gameObject, 2.5f);
+            GetComponent<NavMeshAgent>().enabled = false;
+            GetComponent<Animator>().enabled = false;
+            setColliderState(true);
+            setRigidBodyState(false);
         }
         if (isHealthy)
         {
@@ -179,20 +185,24 @@ public class BossEnemy : MonoBehaviour, IHittable
 
     IEnumerator UpdatePath()
     {
-        float refreshRate = 0.15f;
-
-        while (Qtarget != null && isHealthy || isDamaged)
+        if (!IsDead)
         {
-            Vector3 targetPosition = new Vector3(target.position.x, 0, target.position.z);
+            float refreshRate = 0.15f;
 
-            if (!IsDead)
+            while (Qtarget != null && isHealthy || isDamaged)
             {
-                pathfinder.SetDestination(target.position);
-                yield return new WaitForSeconds(refreshRate);
-            }
+                Vector3 targetPosition = new Vector3(target.position.x, 0, target.position.z);
 
+                {
+                    pathfinder.SetDestination(target.position);
+                    yield return new WaitForSeconds(refreshRate);
+                }
+                if (IsDead)
+                {
+                    StopCoroutine(UpdatePath());
+                }
+            }
         }
-       
 
     }
     
