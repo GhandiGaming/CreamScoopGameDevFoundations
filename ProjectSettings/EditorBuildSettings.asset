@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/JedMenuScenes/StartMenu/TitleMenuScenes/ArcticMenuScene1.unity
     guid: d629b8d132daa794f9a78d17e94d2c3e
   - enabled: 1
-    path: Assets/Scenes/JedPlainsLevel/PlainsLevel.unity
+    path: Assets/Scenes/JedPlainsLevel/WaveOne.unity
     guid: 7b5c273abc552ed4c86fa5581df1d2d8
   m_configObjects: {}

@@ -89,7 +89,7 @@ public class ShootingEnemy : MonoBehaviour, IHittable
             GetComponent<Animator>().enabled = false;
             setColliderState(true);
             setRigidBodyState(false);
-            Invoke(nameof(loot.calculateLoot), 2.5f);
+            loot.calculateLoot();
             Component.Destroy(loot);
         }
     }
