@@ -12,10 +12,17 @@ public class LevelLoader : MonoBehaviour
     // allows this wait time ot be changed in the inspector
     public float transitionTime = 1;
 
+    public bool LoadGameScene;
+
+    void Start()
+    {
+        LoadGameScene = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (LoadGameScene)
         {
             LoadNextLevel();
         }

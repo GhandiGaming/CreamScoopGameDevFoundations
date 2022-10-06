@@ -5,15 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/JedMenuScenes/StartMenu/TitleMenuScenes/PlainsMenuScene.unity
     guid: 1e01202630d072f45949d8eb3da599d5
-  - enabled: 0
-    path: Assets/Scenes/JedMenuScenes/StartMenu/TitleMenuScenes/DesertMenuScene.unity
-    guid: 93d4bc6f0f647f14e95c575e8f8e8b40
-  - enabled: 0
-    path: Assets/Scenes/JedMenuScenes/StartMenu/TitleMenuScenes/ArcticMenuScene1.unity
-    guid: d629b8d132daa794f9a78d17e94d2c3e
   - enabled: 1
     path: Assets/Scenes/JedPlainsLevel/PlainsLevel.unity
     guid: 7b5c273abc552ed4c86fa5581df1d2d8
