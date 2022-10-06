@@ -525,7 +525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9107946899034901819, guid: b8e5e9e7310879e48a968edc4dca205d, type: 3}
       propertyPath: m_Name
-      value: EnemyManager
+      value: Enemy Manager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8e5e9e7310879e48a968edc4dca205d, type: 3}
