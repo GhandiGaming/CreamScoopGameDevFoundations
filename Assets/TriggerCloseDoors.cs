@@ -13,7 +13,7 @@ public class TriggerCloseDoors : MonoBehaviour
         PreventEntryCollider.SetActive(false);
     }
 
-    public void OnTriggerEntry(Collider other)
+    public void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {

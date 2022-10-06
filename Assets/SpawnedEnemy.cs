@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour, IHittable
+public class SpawnedEnemy : MonoBehaviour, IHittable
 {
     public NavMeshAgent pathfinder;
     public LootSpawn loot;
@@ -16,14 +16,14 @@ public class Enemy : MonoBehaviour, IHittable
     public AudioSource takeDamage;
     void Start()
     {
-       setColliderState(false);
-       setRigidBodyState(true);
+        setColliderState(false);
+        setRigidBodyState(true);
         currentHealth = maxHealth;
         pathfinder = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        StartCoroutine(UpdatePath(0f));
+        StartCoroutine(UpdatePath(6f));
         loot = GetComponentInChildren<LootSpawn>();
-        
+
     }
 
     public bool IsDead
@@ -40,10 +40,10 @@ public class Enemy : MonoBehaviour, IHittable
         takeDamage.Play();
     }
 
-    
+
     public void Update()
     {
-       if (IsDead)
+        if (IsDead)
         {
             StopCoroutine(UpdatePath());
             Destroy(gameObject, 2.5f);
@@ -51,16 +51,14 @@ public class Enemy : MonoBehaviour, IHittable
             GetComponent<Animator>().enabled = false;
             setColliderState(true);
             setRigidBodyState(false);
-            loot.calculateLoot();
-            Component.Destroy(loot);
 
         }
     }
 
-    public IEnumerator UpdatePath(float delay = 0f)
+    public IEnumerator UpdatePath(float delay = 6f)
     {
         if (delay != 0)
-            yield return new WaitForSeconds(delay); 
+            yield return new WaitForSeconds(delay);
         if (!IsDead)
         {
             float refreshRate = 0.25f;
@@ -68,11 +66,11 @@ public class Enemy : MonoBehaviour, IHittable
             while (target != null)
             {
                 Vector3 targetPosition = new Vector3(target.position.x, 0, target.position.z);
-                
-                 
-                    pathfinder.SetDestination(target.position);
-                    yield return new WaitForSeconds(refreshRate);
-                
+
+
+                pathfinder.SetDestination(target.position);
+                yield return new WaitForSeconds(refreshRate);
+
                 if (IsDead)
                 {
                     StopCoroutine(UpdatePath());
@@ -97,7 +95,7 @@ public class Enemy : MonoBehaviour, IHittable
 
             }
         }
-    } 
+    }
 
     void setRigidBodyState(bool state)
     {
@@ -107,7 +105,7 @@ public class Enemy : MonoBehaviour, IHittable
         {
             rigidbody.isKinematic = state;
         }
-        
+
     }
     void setColliderState(bool state)
     {
@@ -119,9 +117,9 @@ public class Enemy : MonoBehaviour, IHittable
         }
 
         GetComponent<Collider>().enabled = !state;
-    } 
+    }
     public Transform GetTransform()
     {
         return transform;
-    } 
+    }
 }

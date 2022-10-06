@@ -82,13 +82,15 @@ public class ShootingEnemy : MonoBehaviour, IHittable
         fireCountdown -= Time.deltaTime;
         if (IsDead)
         {
-            loot.calculateLoot();
+           
             StopCoroutine(UpdatePath());
             Destroy(gameObject, 2.5f);
             GetComponent<NavMeshAgent>().enabled = false;
             GetComponent<Animator>().enabled = false;
             setColliderState(true);
             setRigidBodyState(false);
+            loot.calculateLoot();
+            Component.Destroy(loot);
         }
     }
 
