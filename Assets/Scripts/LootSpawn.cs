@@ -51,6 +51,7 @@ public class LootSpawn : MonoBehaviour
 
 
         }
+        Invoke(nameof(calculateLoot),3f);
 
     }
 }

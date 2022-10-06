@@ -85,14 +85,14 @@ public class BossEnemy : MonoBehaviour, IHittable
     {
         get
         {
-            return (currentHealth >= maxHealth - Phase2HP && currentHealth <= maxHealth - Phase1HP);
+            return (currentHealth > maxHealth - Phase2HP && currentHealth <= maxHealth - Phase1HP);
         }
     }
     public bool isDamaged
     {
         get
         {
-            return (currentHealth >= maxHealth - Phase3HP && currentHealth <= maxHealth - Phase2HP);
+            return (currentHealth > maxHealth - Phase3HP && currentHealth <= maxHealth - Phase2HP);
         }
     }
 
@@ -100,7 +100,7 @@ public class BossEnemy : MonoBehaviour, IHittable
     {
         get
         {
-            return (currentHealth >= 0 && currentHealth <= maxHealth - Phase3HP);
+            return (currentHealth > 0 && currentHealth <= maxHealth - Phase3HP);
         }
     }
 
