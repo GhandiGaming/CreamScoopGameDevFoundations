@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 5b1ec3f102322b84ca0e9415da5974e6, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 81fd8caca8fd80b4f918e06a69bae692, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4324,7 +4324,7 @@ Transform:
   - {fileID: 859392828}
   - {fileID: 1081982694}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9107946898704520244
 GameObject:
