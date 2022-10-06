@@ -16,8 +16,8 @@ public class RandomSpawner : MonoBehaviour
     Vector3 getRandomPose()
     {
         float _x = Random.Range(40, 57);
-        float _y = 0.5f;
-        float _z = Random.Range(40, 57);
+        float _y = 1f;
+        float _z = Random.Range(44, 57);
 
         Vector3 newPos = new Vector3(_x, _y, _z);
         return newPos;
