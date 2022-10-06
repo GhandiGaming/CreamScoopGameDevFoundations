@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour, IHittable
         currentHealth = maxHealth;
         pathfinder = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        StartCoroutine(UpdatePath());
+        StartCoroutine(UpdatePath(6f));
         loot = GetComponentInChildren<LootSpawn>();
         
     }
@@ -56,8 +56,10 @@ public class Enemy : MonoBehaviour, IHittable
         }
     }
 
-    public IEnumerator UpdatePath()
+    public IEnumerator UpdatePath(float delay = 6f)
     {
+        if (delay != 0)
+            yield return new WaitForSeconds(delay); 
         if (!IsDead)
         {
             float refreshRate = 0.25f;
