@@ -1123,7 +1123,7 @@ MonoBehaviour:
   pathfinder: {fileID: 0}
   loot: {fileID: 271412442672924214, guid: 900b98d12e073164babb2d5830ad9510, type: 3}
   damage: 15
-  maxHealth: 20
+  maxHealth: 40
   currentHealth: 0
   takeDamage: {fileID: 2012109296723006388}
 --- !u!1 &6518967502127398791

@@ -442,7 +442,7 @@ MonoBehaviour:
   loot: {fileID: 7459949540549502381}
   damage: 15
   bSpeed: 70
-  maxHealth: 20
+  maxHealth: 100
   currentHealth: 0
   fireRate: 1
   fireCountdown: 0

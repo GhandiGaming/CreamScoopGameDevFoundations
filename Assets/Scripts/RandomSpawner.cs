@@ -10,14 +10,14 @@ public class RandomSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnNow", 6f, 1.5f);
+        InvokeRepeating("SpawnNow", 7f, 1.5f);
     }
 
     Vector3 getRandomPose()
     {
-        float _x = Random.Range(30, 67);
+        float _x = Random.Range(10, 87);
         float _y = 1f;
-        float _z = Random.Range(34, 67);
+        float _z = Random.Range(14, 87);
 
         Vector3 newPos = new Vector3(_x, _y, _z);
         return newPos;

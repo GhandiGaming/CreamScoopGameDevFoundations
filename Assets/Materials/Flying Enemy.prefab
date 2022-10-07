@@ -1465,7 +1465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   currentHealth: 0
-  maxHealth: 30
+  maxHealth: 50
   damage: 20
   rotationalDamp: 0.5
   movementSpeed: 10

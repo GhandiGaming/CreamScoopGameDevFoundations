@@ -912,7 +912,7 @@ MonoBehaviour:
   pathfinder: {fileID: 6776501315034704047}
   loot: {fileID: 6776501315283312731}
   damage: 25
-  maxHealth: 100
+  maxHealth: 60
   currentHealth: 0
   takeDamage: {fileID: 2278413300026575978}
 --- !u!82 &2278413300026575978
