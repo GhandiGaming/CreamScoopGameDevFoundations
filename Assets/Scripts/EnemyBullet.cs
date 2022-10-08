@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    private int damage = 20;
+    public int damage = 20;
     //public float Speed = 1;
 
     private Transform target;

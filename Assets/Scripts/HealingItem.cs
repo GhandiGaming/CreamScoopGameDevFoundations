@@ -6,6 +6,7 @@ public class HealingItem : MonoBehaviour
 {
 	public int Heal = 20; //Int Health = (Amount of Health to heal)
 	PlayerStats stats;
+	public AudioSource PowerUp;
 	
 	void Awake() //On START
 	{
@@ -50,7 +51,7 @@ public class HealingItem : MonoBehaviour
 					{
 
 						stats.HealDamage(Heal); //HealPlayer
-
+						PowerUp.Play();
 						Destroy(gameObject);//Delete healing item
 
 					} //ENDIF
@@ -59,6 +60,7 @@ public class HealingItem : MonoBehaviour
 					if(isSlightDamaged) //If(SlightDamaged is True)
 					{   //Item Behaviour
 						stats.SlightHealDamage(); //Set Player Health to maxHealth
+						PowerUp.Play();
 						Destroy(gameObject); //Delete healing item
 					} //ENDIF
 				}//ENDIF

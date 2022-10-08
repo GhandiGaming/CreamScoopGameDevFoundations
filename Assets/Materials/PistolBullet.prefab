@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1313913176897888903}
   - component: {fileID: -2687929110179836900}
   m_Layer: 0
-  m_Name: PlayerBullet
+  m_Name: PistolBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 541092e81ff58bb4682378bf20c662c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 25
   rb: {fileID: 1313913176897888896}
   explosion: {fileID: 0}
   whatIsEnemies:

@@ -34,6 +34,7 @@ public class PlayerStats : MonoBehaviour, IHittable
     {
         currentHealth = currentHealth - damage;
 
+
         if (IsDead)
         {
             GameOver.Play();
@@ -45,10 +46,12 @@ public class PlayerStats : MonoBehaviour, IHittable
     public void HealDamage(int Heal)
     {
         currentHealth = currentHealth + Heal;
+
     }
     public void SlightHealDamage()
     {
         currentHealth = maxHealth;
+
     }
 
     public Transform GetTransform()
