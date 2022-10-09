@@ -183,8 +183,10 @@ public class BossEnemy : MonoBehaviour, IHittable
     }
 
 
-    IEnumerator UpdatePath()
+    IEnumerator UpdatePath()//float delay = 6f)
     {
+       // if (delay != 0)
+          //  yield return new WaitForSeconds(delay);
         if (!IsDead)
         {
             float refreshRate = 0.15f;
