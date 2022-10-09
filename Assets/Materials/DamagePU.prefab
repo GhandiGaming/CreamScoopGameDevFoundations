@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1785384540142227844}
   - component: {fileID: 129713373383637902}
   - component: {fileID: -5677223300013715003}
+  - component: {fileID: 1419390100824821642}
   m_Layer: 0
   m_Name: DamagePU
   m_TagString: Untagged
@@ -61,8 +62,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increaseBulletAmount: 1
   increaseAmmoCapacity: 50
-  powerupDuration: 30
+  powerupDuration: 20
   artToDisable: {fileID: 5808057504098551494}
+  StartTimer: 0
   PU: {fileID: -5677223300013715003}
 --- !u!82 &-5677223300013715003
 AudioSource:
@@ -160,6 +162,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1419390100824821642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785384540142227843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759a16374bc71a140952b4e3248aa216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorTimer: 1
+  maxIndicatorTimer: 1
+  radialIndicatorUI: {fileID: 0}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  DamageUP: {fileID: 1785384540142227843}
 --- !u!1 &5808057504098551494
 GameObject:
   m_ObjectHideFlags: 0

@@ -141,8 +141,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decreaseFRAmount: 0.25
-  powerupDuration: 30
+  powerupDuration: 20
   artToDisable: {fileID: 481143517901648426}
+  StartTimer: 0
+  PU: {fileID: 7932081916881942064}
 --- !u!82 &7932081916881942064
 AudioSource:
   m_ObjectHideFlags: 0

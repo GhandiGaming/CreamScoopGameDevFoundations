@@ -10,7 +10,7 @@ public class RandomSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnNow", 7f, 1.5f);
+        InvokeRepeating("SpawnNow", 7f, 0.5f);
     }
 
     Vector3 getRandomPose()
@@ -28,7 +28,7 @@ public class RandomSpawner : MonoBehaviour
     }
     void SpawnNow()
     {
-        Instantiate(enemiesToSpawn[Random.Range(0, 2)], getRandomPose(), Quaternion.identity);
+        Instantiate(enemiesToSpawn[Random.Range(0, 1)], getRandomPose(), Quaternion.identity);
         Debug.Log("Enemy created");
     }
 

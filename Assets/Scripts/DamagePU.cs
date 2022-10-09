@@ -12,7 +12,7 @@ public class DamagePU : MonoBehaviour
     private float powerupDuration = 30;
     [SerializeField]
     private GameObject artToDisable = null;
-
+    public bool StartTimer = false;
     private Collider collider;
     public AudioSource PU;
     private void Awake()
@@ -35,19 +35,22 @@ public class DamagePU : MonoBehaviour
         collider.enabled = false;
         artToDisable.SetActive(false);
         PU.Play();
+        StartTimer = true;
         EnablePowerUp(pGT);
+        
         yield return new WaitForSeconds(powerupDuration);
         DisablePowerUp(pGT);
+        StartTimer = false;
         Destroy(gameObject);
     }
     private void EnablePowerUp(ProjectileGunTutorial pGT)
     {
         pGT.SetBN(increaseBulletAmount);
-        pGT.SetAC(increaseAmmoCapacity);
+        pGT.SetAC(pGT.bulletsPerTap);
     }
     private void DisablePowerUp(ProjectileGunTutorial pGT)
     {
-        pGT.SetBN(-increaseBulletAmount);
+        pGT.SetBN(pGT.bulletsPerTap);
         pGT.SetAC(-increaseAmmoCapacity);
     }
 }

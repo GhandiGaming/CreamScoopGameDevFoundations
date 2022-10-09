@@ -9,12 +9,14 @@ public class PlayerStats : MonoBehaviour, IHittable
     public int maxHealth;
     public int currentHealth;
     public AudioSource GameOver;
+    public HealthBar healthbar;
 
-      void Start()
+    void Start()
       {
         maxHealth = SetMaxHealthFromLevel();
         currentHealth = maxHealth;
-      }
+        healthbar.SetMaxHealth(maxHealth);
+    }
 
     private int SetMaxHealthFromLevel()
     {
@@ -33,6 +35,7 @@ public class PlayerStats : MonoBehaviour, IHittable
     public void TakeDamage(int damage)
     {
         currentHealth = currentHealth - damage;
+        healthbar.SetCurrentHealth(currentHealth);
 
 
         if (IsDead)
@@ -46,11 +49,13 @@ public class PlayerStats : MonoBehaviour, IHittable
     public void HealDamage(int Heal)
     {
         currentHealth = currentHealth + Heal;
+        healthbar.SetCurrentHealth(currentHealth);
 
     }
     public void SlightHealDamage()
     {
         currentHealth = maxHealth;
+        healthbar.SetCurrentHealth(currentHealth);
 
     }
 

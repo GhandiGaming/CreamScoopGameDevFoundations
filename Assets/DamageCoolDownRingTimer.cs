@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class CoolDownRingTimer : MonoBehaviour
+public class DamageCoolDownRingTimer : MonoBehaviour
 {
     /// <summary>
     /// Responsible for the speed of the cooldown ring, used to indicate
@@ -18,27 +18,26 @@ public class CoolDownRingTimer : MonoBehaviour
     [Header("UI Indicator")]
     [SerializeField] private Image radialIndicatorUI = null;
 
-   
+
 
     [Header("Unity Event")]
     [SerializeField] private UnityEvent myEvent = null;
 
     private bool coolDownActivated = false;
-    public GameObject speedUP;
+    public GameObject DamageUP;
 
-    
     public void Update()
     {
-        SpeedPU speed = speedUP.GetComponent<SpeedPU>();
-
-        if (speed.StartTimer)
+        DamagePU Dmg = DamageUP.GetComponent<DamagePU>();
+        if (Dmg.StartTimer)
         {
             coolDownActivated = true;
+            Debug.Log("Kill");
         }
-        
+
         if (coolDownActivated == true)
         {
-            indicatorTimer -= Time.deltaTime/20;
+            indicatorTimer -= Time.deltaTime / 20;
             radialIndicatorUI.enabled = true;
             radialIndicatorUI.fillAmount = indicatorTimer;
 

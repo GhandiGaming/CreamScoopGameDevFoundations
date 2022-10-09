@@ -7,10 +7,10 @@ public class FireRatePU : MonoBehaviour
     [SerializeField]
     private float decreaseFRAmount = 0.25f;
     [SerializeField]
-    private float powerupDuration = 30;
+    private float powerupDuration = 20;
     [SerializeField]
     private GameObject artToDisable = null;
-
+    public bool StartTimer = false;
     private Collider collider;
     public AudioSource PU;
 
@@ -35,17 +35,21 @@ public class FireRatePU : MonoBehaviour
         artToDisable.SetActive(false);
         PU.Play();
         EnablePowerUp(pGT);
+        StartTimer = true;
         yield return new WaitForSeconds(powerupDuration);
         DisablePowerUp(pGT);
+        StartTimer = false;
         Destroy(gameObject);
     }
     private void EnablePowerUp(ProjectileGunTutorial pGT)
     {
         pGT.SetFR(decreaseFRAmount);
+        StartTimer = true;
     }
     private void DisablePowerUp(ProjectileGunTutorial pGT)
     {
         pGT.SetFR(-decreaseFRAmount);
+        StartTimer = true;
     }
 
 }

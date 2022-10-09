@@ -12,14 +12,13 @@ public class LevelLoader : MonoBehaviour
     // allows this wait time ot be changed in the inspector
     public float transitionTime = 1;
 
-    public int playerHealth = 100;
 
     public bool LoadGameScene;
 
     void Start()
     {
         LoadGameScene = false;
-        PlayerPrefs.SetInt("PlayerCurrentHealth", playerHealth);
+
     }
 
     // Update is called once per frame
@@ -28,8 +27,7 @@ public class LevelLoader : MonoBehaviour
         if (LoadGameScene)
         {
             LoadNextLevel();
-            PlayerPrefs.SetInt("PlayerCurrentHealth", playerHealth); //On start the player's health is loaded
-            PlayerPrefs.SetInt("PlayerMaxHealth", playerHealth);
+
         }
     }
 

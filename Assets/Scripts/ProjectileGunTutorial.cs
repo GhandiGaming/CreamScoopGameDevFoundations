@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 
 public class ProjectileGunTutorial : MonoBehaviour
@@ -32,7 +32,7 @@ public class ProjectileGunTutorial : MonoBehaviour
 
     //Graphics
     public GameObject muzzleFlash;
-    public TextMeshProUGUI ammunitionDisplay;
+    public Text ammunitionDisplay;
 
     //bug fixing :D
     public bool allowInvoke = true;
@@ -51,7 +51,7 @@ public class ProjectileGunTutorial : MonoBehaviour
 
         //Set ammo display, if it exists :D
         if (ammunitionDisplay != null)
-            ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
+            ammunitionDisplay.text = (bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
     }
     private void MyInput()
     {
@@ -159,6 +159,6 @@ public class ProjectileGunTutorial : MonoBehaviour
     }
     public void SetAC(int AC)
     {
-       magazineSize += AC;
+       magazineSize += magazineSize;
     }
 }

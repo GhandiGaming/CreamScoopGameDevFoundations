@@ -11,6 +11,7 @@ public class SpeedPU : MonoBehaviour
     [SerializeField]
     private GameObject artToDisable = null;
     public AudioSource PU;
+    public bool StartTimer = false;
     private Collider collider;
 
     private void Awake()
@@ -27,23 +28,27 @@ public class SpeedPU : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    
     public IEnumerator RunPowerUp(PlayerMovement pM)
     {
         collider.enabled = false;
         artToDisable.SetActive(false);
         PU.Play();
         EnablePowerUp(pM);
+        StartTimer = true;
         yield return new WaitForSeconds(powerupDuration);
         DisablePowerUp(pM);
+        StartTimer = false;
         Destroy(gameObject);
     }
     private void EnablePowerUp(PlayerMovement pM)
     {
         pM.SetSpeed(increaseSpeedAmount);
+        
     }
     private void DisablePowerUp(PlayerMovement pM)
     {
         pM.SetSpeed(-increaseSpeedAmount);
+        
     }
 }
