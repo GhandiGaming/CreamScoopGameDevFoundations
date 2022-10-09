@@ -29,6 +29,7 @@ public class FlyingEnemy : MonoBehaviour, IHittable
         currentHealth = maxHealth;
         setColliderState(false);
         setRigidBodyState(true);
+
     }
 
     // Update is called once per frame

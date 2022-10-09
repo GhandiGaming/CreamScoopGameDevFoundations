@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomSpawner : MonoBehaviour
+public class RandomSpawner2 : MonoBehaviour
 {
     public GameObject[] enemiesToSpawn;
 
@@ -10,7 +10,7 @@ public class RandomSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnNow", 7f, 1.5f);
+        InvokeRepeating("SpawnNow", 7f, 1f);
     }
 
     Vector3 getRandomPose()
@@ -24,11 +24,11 @@ public class RandomSpawner : MonoBehaviour
     }
     private void Update()
     {
-        Invoke(nameof(StopSpawn), 22.5f);
+        Invoke(nameof(StopSpawn), 45f);
     }
     void SpawnNow()
     {
-        Instantiate(enemiesToSpawn[Random.Range(0, 1)], getRandomPose(), Quaternion.identity);
+        Instantiate(enemiesToSpawn[Random.Range(0, 3)], getRandomPose(), Quaternion.identity);
         Debug.Log("Enemy created");
     }
 

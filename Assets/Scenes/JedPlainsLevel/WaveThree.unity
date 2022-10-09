@@ -2475,7 +2475,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1393579819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a7cd51338500fe4283dd37419109d19, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f767883e0efa3d4289a6d6ff60e034f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &1393579821
@@ -6365,6 +6365,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8564131216155441833, guid: 8e9158d51970e7f44b7b0709d97e45ca, type: 3}
+      propertyPath: m_Text
+      value: '3
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9158d51970e7f44b7b0709d97e45ca, type: 3}
 --- !u!1001 &8797521422727772192
@@ -6428,21 +6434,6 @@ PrefabInstance:
       objectReference: {fileID: 2337110337088489381}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4912c2c2bde7dc488963341f7220fa5, type: 3}
---- !u!114 &9107946898704520234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9107946898704520244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44e3dc5f41ed3734392aac4d52bf5584, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesToSpawn:
-  - {fileID: 6776501315034704045, guid: e043ceaf4898cd542970845f199709b6, type: 3}
-  - {fileID: 5210606462015047256, guid: 458ed6f006c9e2f4c9907879a03b615a, type: 3}
 --- !u!4 &9107946898704520235
 Transform:
   m_ObjectHideFlags: 0
@@ -6471,8 +6462,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9107946898704520235}
-  - component: {fileID: 9107946898704520234}
   - component: {fileID: 9107946898704520245}
+  - component: {fileID: 9107946898704520246}
+  - component: {fileID: 9107946898704520247}
   m_Layer: 0
   m_Name: Enemy Manager
   m_TagString: Untagged
@@ -6496,3 +6488,36 @@ MonoBehaviour:
   DisableCollider: {fileID: 1680989746}
   Enemy: []
   enemyCount: {fileID: 411343650}
+--- !u!114 &9107946898704520246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9107946898704520244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f29b872f9a96594ca4b99bc91429e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesToSpawn:
+  - {fileID: 6776501315034704045, guid: e043ceaf4898cd542970845f199709b6, type: 3}
+  - {fileID: 6776501315034704045, guid: e043ceaf4898cd542970845f199709b6, type: 3}
+  - {fileID: 6776501315034704045, guid: e043ceaf4898cd542970845f199709b6, type: 3}
+  - {fileID: 5210606462015047256, guid: 458ed6f006c9e2f4c9907879a03b615a, type: 3}
+  - {fileID: 5210606462015047256, guid: 458ed6f006c9e2f4c9907879a03b615a, type: 3}
+--- !u!114 &9107946898704520247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9107946898704520244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ee43bd6069a844597eec3caf6344b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesToSpawn:
+  - {fileID: 2401231118988934303, guid: acec21640686dc941ae9994dec7a9350, type: 3}
+  player: {fileID: 4677574223480691241}

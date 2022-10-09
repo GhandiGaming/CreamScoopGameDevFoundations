@@ -2,21 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomSpawner : MonoBehaviour
+public class FRandomSpawner2 : MonoBehaviour
 {
     public GameObject[] enemiesToSpawn;
+    public Transform player;
 
 
     // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
-        InvokeRepeating("SpawnNow", 7f, 1.5f);
+        InvokeRepeating("SpawnNow", 7f, 3f);
+
+
+
+
     }
 
     Vector3 getRandomPose()
     {
         float _x = Random.Range(10, 87);
-        float _y = 1f;
+        float _y = Random.Range(10, 17);
         float _z = Random.Range(14, 87);
 
         Vector3 newPos = new Vector3(_x, _y, _z);
@@ -24,11 +29,13 @@ public class RandomSpawner : MonoBehaviour
     }
     private void Update()
     {
-        Invoke(nameof(StopSpawn), 22.5f);
+        Invoke(nameof(StopSpawn), 90f);
     }
     void SpawnNow()
     {
-        Instantiate(enemiesToSpawn[Random.Range(0, 1)], getRandomPose(), Quaternion.identity);
+        var go = Instantiate(enemiesToSpawn[Random.Range(0, 5)], getRandomPose(), Quaternion.identity);
+        var component = go.GetComponent<FlyingEnemy>();
+        component.target = player;
         Debug.Log("Enemy created");
     }
 

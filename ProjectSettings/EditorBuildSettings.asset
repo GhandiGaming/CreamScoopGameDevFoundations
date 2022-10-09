@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JedPlainsLevel/WaveOne.unity
     guid: 7b5c273abc552ed4c86fa5581df1d2d8
+  - enabled: 1
+    path: Assets/Scenes/JedPlainsLevel/WaveTwo.unity
+    guid: 479bfb6038393fc4283e9357448a6714
   m_configObjects: {}

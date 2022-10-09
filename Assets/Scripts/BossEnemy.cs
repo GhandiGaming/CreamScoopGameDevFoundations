@@ -41,7 +41,7 @@ public class BossEnemy : MonoBehaviour, IHittable
         var Colliders = GetComponentsInChildren<Collider>();
         foreach(var collider in Colliders)
         {
-            Hitbox hitbox = collider.gameObject.AddComponent<Hitbox>();
+            collider.gameObject.AddComponent<Hitbox>();
         }
     }
     

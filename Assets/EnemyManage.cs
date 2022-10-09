@@ -39,6 +39,7 @@ public class EnemyManage : MonoBehaviour
         }
 
         int NumberofEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        enemyCount.text = NumberofEnemies.ToString();
+        if (enemyCount!=null)
+           enemyCount.text = NumberofEnemies.ToString();
     }
 }

@@ -10,9 +10,11 @@ public class PlayerStats : MonoBehaviour, IHittable
     public int currentHealth;
     public AudioSource GameOver;
     public HealthBar healthbar;
+    
 
     void Start()
       {
+        
         maxHealth = SetMaxHealthFromLevel();
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
@@ -63,4 +65,5 @@ public class PlayerStats : MonoBehaviour, IHittable
     {
         return transform;
     }
+
 }
