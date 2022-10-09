@@ -117,7 +117,7 @@ public class BossEnemy : MonoBehaviour, IHittable
             
         if (!isVeryDamaged)
         {
-            
+           
             Aim();
             barrel.LookAt(target);
         }
@@ -175,6 +175,7 @@ public class BossEnemy : MonoBehaviour, IHittable
             animator.SetBool("Roar", true);
             animator.SetBool("Sthrow", false);
             meteor.SetActive(true);
+
         }
         else
         {
@@ -183,10 +184,10 @@ public class BossEnemy : MonoBehaviour, IHittable
     }
 
 
-    IEnumerator UpdatePath()//float delay = 6f)
+    IEnumerator UpdatePath(float delay = 6f)
     {
-       // if (delay != 0)
-          //  yield return new WaitForSeconds(delay);
+        if (delay != 0)
+            yield return new WaitForSeconds(delay);
         if (!IsDead)
         {
             float refreshRate = 0.15f;
@@ -218,7 +219,7 @@ public class BossEnemy : MonoBehaviour, IHittable
         shooting = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    /*/private void OnCollisionEnter(Collision collision)
     {
 
         if (collision.collider.CompareTag("Player"))
@@ -233,12 +234,11 @@ public class BossEnemy : MonoBehaviour, IHittable
 
         }
 
-    }
+    }/*/
 
     void Shoot()
     {
-        if (isSlightDamaged || isDamaged)
-        { 
+        
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, barrel.position, barrel.rotation);
         GameObject bulletGO4 = (GameObject)Instantiate(bulletPrefab, barrel.position, barrel.rotation);
         GameObject bulletGO5 = (GameObject)Instantiate(bulletPrefab, barrel.position, barrel.rotation);
@@ -247,40 +247,40 @@ public class BossEnemy : MonoBehaviour, IHittable
         bulletGO5.GetComponent<Rigidbody>().AddForce((-barrel.right + barrel.forward) * 500);
 
         BossBullet bullet = bulletGO.GetComponent<BossBullet>();
-        BossBullet bullet2 = bulletGO4.GetComponent<BossBullet>();
-        BossBullet bullet3 = bulletGO5.GetComponent<BossBullet>();
+        BossBullet bullet4 = bulletGO4.GetComponent<BossBullet>();
+        BossBullet bullet5 = bulletGO5.GetComponent<BossBullet>();
 
         if (bullet != null)
         {
             bullet.Seek(target);
 
         }
-        if (bullet2 != null)
+        if (bullet4 != null)
         {
-            bullet2.Seek(target);
+            bullet4.Seek(target);
 
         }
-        if (bullet3 != null)
+        if (bullet5 != null)
         {
-            bullet3.Seek(target);
+            bullet5.Seek(target);
 
         }
 
         Destroy(bulletGO, 6f);
         Destroy(bulletGO4, 6f);
         Destroy(bulletGO5, 6f);
-        }
+        
         if (isDamaged)
         {
             
-            GameObject bulletGO = Instantiate(bulletPrefab1, barrel.position, barrel.rotation);
+            GameObject bulletGO0 = Instantiate(bulletPrefab1, barrel.position, barrel.rotation);
             GameObject bulletGO2 = Instantiate(bulletPrefab, barrel.position, barrel.rotation);
             GameObject bulletGO3 = Instantiate(bulletPrefab, barrel.position, barrel.rotation);
-            bulletGO.GetComponent<Rigidbody>().AddForce(barrel.forward * 2000);
+            bulletGO0.GetComponent<Rigidbody>().AddForce(barrel.forward * 2000);
             bulletGO2.GetComponent<Rigidbody>().AddForce(barrel.right * 1000);
             bulletGO3.GetComponent<Rigidbody>().AddForce(-barrel.right* 1000);
 
-            EnemyBullet bullet = bulletGO.GetComponent<EnemyBullet>();
+            EnemyBullet bullet0 = bulletGO0.GetComponent<EnemyBullet>();
             BossBullet bullet2 = bulletGO2.GetComponent<BossBullet>();
             BossBullet bullet3 = bulletGO3.GetComponent<BossBullet>();
             if (bullet != null)

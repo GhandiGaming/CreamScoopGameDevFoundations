@@ -14,25 +14,25 @@ public class SpawnMeteor : MonoBehaviour
 
     public void Start()
     {
-        BossEnemy Boss = boss.GetComponent<BossEnemy>();
-        if (Boss.isVeryDamaged)
+       
         {
-           StartCoroutine(Spawn());
+            StartCoroutine(Spawn());
         }
-
+        
     }
     public void Update()
     {
         
-        
+
+
     }
 
     // Update is called once per frame
     IEnumerator Spawn()
     {
         {
-            xPos = Random.Range(-50, 50);
-            zPos = Random.Range(-50, 50);
+            xPos = Random.Range(10, 110);
+            zPos = Random.Range(10, 110);
 
             Instantiate(meteor, new Vector3(xPos, 50, zPos), Quaternion.identity);
             yield return new WaitForSeconds(wait);
