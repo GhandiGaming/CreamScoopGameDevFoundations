@@ -3472,7 +3472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &917726103
 Transform:
   m_ObjectHideFlags: 0
@@ -5196,7 +5196,7 @@ MonoBehaviour:
   - {fileID: 917726103}
   - {fileID: 1546563581}
   - {fileID: 4677574222791235531}
-  keys: 310000003200000033000000
+  keys: 330000003200000031000000
   switchTime: 0.1
 --- !u!1 &1262674249
 GameObject:
@@ -10346,7 +10346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &4677574223321168794
 MonoBehaviour:
   m_ObjectHideFlags: 0
