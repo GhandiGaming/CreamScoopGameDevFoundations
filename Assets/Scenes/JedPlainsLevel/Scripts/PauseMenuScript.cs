@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuScript : MonoBehaviour
 {
@@ -12,12 +13,14 @@ public class PauseMenuScript : MonoBehaviour
     public GameObject MainCamera;
 
     public Canvas PauseMenuCanvas;
+    public Canvas AudioMenuCanvas;
     public Canvas HUDCanvas;
 
     void Start()
     {
         HUDCanvas.gameObject.SetActive(true);
         PauseMenuCanvas.gameObject.SetActive(false);
+        AudioMenuCanvas.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -69,16 +72,21 @@ public class PauseMenuScript : MonoBehaviour
     public void LoadAudioMenu()
     {
         Debug.Log("Loading Audio Menu");
+        AudioMenuCanvas.gameObject.SetActive(true);
     }
 
     public void QuitToTitle()
     {
         Debug.Log("Quitting to Title");
+        SceneManager.LoadScene("PlainsMenuScene");
     }
 
     public void RestartRound()
     {
         Debug.Log("Restarting Round");
+
+        // Write code to reset to current round
+        // SceneManager.LoadScene(Wave...);
     }
 
 
