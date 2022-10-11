@@ -885,7 +885,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 15
+  m_Speed: 12
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 240
@@ -911,8 +911,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathfinder: {fileID: 6776501315034704047}
   loot: {fileID: 6776501315283312731}
-  damage: 25
-  maxHealth: 60
+  damage: 15
+  maxHealth: 50
   currentHealth: 0
   takeDamage: {fileID: 2278413300026575978}
 --- !u!82 &2278413300026575978
