@@ -139,7 +139,7 @@ public class ProjectileGunTutorial : MonoBehaviour
 
     private void Reload()
     {
-        ReloadSound.Play();
+        
         reloading = true;
         Invoke("ReloadFinished", reloadTime); //Invoke ReloadFinished function with your reloadTime as delay
     }
@@ -147,6 +147,7 @@ public class ProjectileGunTutorial : MonoBehaviour
     {
         //Fill magazine
         bulletsLeft = magazineSize;
+        ReloadSound.Play();
         reloading = false;
     }
     public void SetFR(float FR)
