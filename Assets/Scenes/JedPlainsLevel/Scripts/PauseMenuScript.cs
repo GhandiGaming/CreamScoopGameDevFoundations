@@ -47,6 +47,7 @@ public class PauseMenuScript : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
         FreezeCamera();
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void Resume()
@@ -57,6 +58,7 @@ public class PauseMenuScript : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         FreezeCameraOff();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void FreezeCamera()
@@ -96,7 +98,8 @@ public class PauseMenuScript : MonoBehaviour
         Debug.Log("Restarting Round");
 
         // Write code to reset to current round
-        // SceneManager.LoadScene(Wave...);
+        SceneManager.LoadScene("WaveOne");
+        Time.timeScale = 1f;
     }
 
     public void ReturnToPauseMenu()

@@ -5,5 +5,9 @@ using UnityEngine.UI;
 
 public class SetControlsScript : MonoBehaviour
 {
-    
+
+    void Update()
+    { 
+   
+    }
 }
