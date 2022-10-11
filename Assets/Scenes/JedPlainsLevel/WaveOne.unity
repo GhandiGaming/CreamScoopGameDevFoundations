@@ -3313,6 +3313,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+=======
+--- !u!1001 &1405733601
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3241303375627935773, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_Name
+      value: MenuScriptObject (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936738, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936738, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 362.79025
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936738, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 418.4087
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936738, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1064.7998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936738, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936738, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936738, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936738, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936738, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936738, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936738, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241303375627936739, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 4677574223480691238}
+    - target: {fileID: 3241303375627936739, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: HUDCanvas
+      value: 
+      objectReference: {fileID: 1361741255}
+    - target: {fileID: 3241303375627936739, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: MainCamera
+      value: 
+      objectReference: {fileID: 4677574223321168798}
+    - target: {fileID: 3241303375627936739, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: WeaponHolder
+      value: 
+      objectReference: {fileID: 4677574224264895185}
+    - target: {fileID: 3241303375627936739, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: AudioMenuCanvas
+      value: 
+      objectReference: {fileID: 426489235}
+    - target: {fileID: 3241303375627936739, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+      propertyPath: PauseMenuCanvas
+      value: 
+      objectReference: {fileID: 1390220533}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 330465ae13129794ab2fd825a4e4d201, type: 3}
+>>>>>>> Stashed changes
 --- !u!1001 &1421012428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7056,7 +7140,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnableTrigger: {fileID: 1393579819}
+<<<<<<< Updated upstream
   EnableText: {fileID: 1475332774}
+=======
+  EnableText: {fileID: 0}
+>>>>>>> Stashed changes
   DisableCollider: {fileID: 1680989746}
   Enemy: []
   enemyCount: {fileID: 411343650}
