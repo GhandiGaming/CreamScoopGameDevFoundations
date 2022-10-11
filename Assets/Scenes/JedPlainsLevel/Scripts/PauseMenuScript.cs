@@ -8,7 +8,6 @@ public class PauseMenuScript : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
-
     public GameObject WeaponHolder;
     public GameObject MainCamera;
 
@@ -52,6 +51,7 @@ public class PauseMenuScript : MonoBehaviour
     public void Resume()
     {
         PauseMenuCanvas.gameObject.SetActive(false);
+        AudioMenuCanvas.gameObject.SetActive(false);
         HUDCanvas.gameObject.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -74,8 +74,13 @@ public class PauseMenuScript : MonoBehaviour
 
     public void LoadAudioMenu()
     {
-        Debug.Log("Loading Audio Menu");
-        AudioMenuCanvas.gameObject.SetActive(true);
+        if (GameIsPaused)
+        {
+            Debug.Log("Loading Audio Menu");
+            AudioMenuCanvas.gameObject.SetActive(true);
+            PauseMenuCanvas.gameObject.SetActive(false);
+            Time.timeScale = 0f;
+        }
     }
 
     public void QuitToTitle()
@@ -93,5 +98,11 @@ public class PauseMenuScript : MonoBehaviour
         // SceneManager.LoadScene(Wave...);
     }
 
-
+    public void ReturnToPauseMenu()
+    {
+        Debug.Log("BackButtonPressed");
+        AudioMenuCanvas.gameObject.SetActive(false);
+        PauseMenuCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0f;
+    }
 }
