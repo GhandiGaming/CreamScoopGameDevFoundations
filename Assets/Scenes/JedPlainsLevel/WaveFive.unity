@@ -2936,11 +2936,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ca68a9cbe1a6c498934845b77338f1, type: 3}
---- !u!82 &887506951 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4459083243176681562, guid: 86344dff63f902747ba60b55901eb2e9, type: 3}
-  m_PrefabInstance: {fileID: 1045332579}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &905244529
 GameObject:
   m_ObjectHideFlags: 0
@@ -4203,7 +4198,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElevatorButtonSource
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4459083243176681562, guid: 86344dff63f902747ba60b55901eb2e9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 86344dff63f902747ba60b55901eb2e9, type: 3}
 --- !u!82 &1045332580 stripped
 AudioSource:
@@ -4692,7 +4688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2125176176ee3c9408e2e55a6b8c0dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ElevatorMusicSource: {fileID: 887506951}
+  ElevatorMusicSource: {fileID: 0}
   DoorsClosedExit: 0
 --- !u!1 &1222920223
 GameObject:
