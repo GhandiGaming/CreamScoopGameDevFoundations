@@ -1392,7 +1392,7 @@ Transform:
   m_Children:
   - {fileID: 297341164}
   m_Father: {fileID: 4677574224264895184}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 259.05, z: 0}
 --- !u!82 &917726104
 AudioSource:
@@ -2378,9 +2378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 917726103}
-  - {fileID: 1546563581}
   - {fileID: 4677574222791235531}
+  - {fileID: 1546563581}
+  - {fileID: 917726103}
   keys: 310000003200000033000000
   switchTime: 0.1
 --- !u!1001 &1278526081
@@ -5690,7 +5690,7 @@ Transform:
   m_Children:
   - {fileID: 4677574223415453768}
   m_Father: {fileID: 4677574224264895184}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -11.51, z: 355}
 --- !u!1 &4677574222791235532
 GameObject:
@@ -6674,9 +6674,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 917726103}
-  - {fileID: 1546563581}
   - {fileID: 4677574222791235531}
+  - {fileID: 1546563581}
+  - {fileID: 917726103}
   m_Father: {fileID: 4677574223443049151}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
