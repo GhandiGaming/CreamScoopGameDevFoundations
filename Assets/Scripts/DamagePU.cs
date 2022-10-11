@@ -13,7 +13,7 @@ public class DamagePU : MonoBehaviour
     [SerializeField]
     private GameObject artToDisable = null;
     public bool StartTimer = false;
-    private Collider collider;
+    public Collider collider;
     public AudioSource PU;
     private void Awake()
     {

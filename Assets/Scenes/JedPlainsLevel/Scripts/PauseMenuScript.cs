@@ -15,6 +15,7 @@ public class PauseMenuScript : MonoBehaviour
     public Canvas PauseMenuCanvas;
     public Canvas AudioMenuCanvas;
     public Canvas HUDCanvas;
+    public PlayerStats stats;
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class PauseMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !stats.IsDead)
         {
             if (GameIsPaused)
             {
@@ -60,12 +61,14 @@ public class PauseMenuScript : MonoBehaviour
     void FreezeCamera()
     {
         MainCamera.GetComponent<PlayerSee>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
         WeaponHolder.GetComponent<WeaponSway>().enabled = false;
     }
 
     void FreezeCameraOff()
     {
         MainCamera.GetComponent<PlayerSee>().enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
         WeaponHolder.GetComponent<WeaponSway>().enabled = true;
     }
 
@@ -78,6 +81,7 @@ public class PauseMenuScript : MonoBehaviour
     public void QuitToTitle()
     {
         Debug.Log("Quitting to Title");
+        Time.timeScale = 1f;
         SceneManager.LoadScene("PlainsMenuScene");
     }
 

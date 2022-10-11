@@ -2,15 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class GameOverMenuScript : MonoBehaviour
+public class WinScreenButtons : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject AudioHUD;
     public void LoadMenu()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene("PlainsMenuScene");
     }
 
-    
+    public void LoadRetry()
+    {
+        SceneManager.LoadScene("PlainsMenuScene");
+    }
+
+    public void LoadAudioHUD()
+    {
+        
+    }
 }

@@ -24,7 +24,7 @@ public class RandomSpawner : MonoBehaviour
     }
     private void Update()
     {
-        Invoke(nameof(StopSpawn), 22.5f);
+        Invoke(nameof(StopSpawn), 30f);
     }
     void SpawnNow()
     {

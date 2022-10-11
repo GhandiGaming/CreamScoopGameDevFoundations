@@ -10,11 +10,13 @@ public class PlayerStats : MonoBehaviour, IHittable
     public int currentHealth;
     public AudioSource GameOver;
     public HealthBar healthbar;
-    
+    public GameObject DeathHUD;
+    public GameObject WeaponHolder;
+    public GameObject MainCamera;
 
     void Start()
       {
-        
+        DeathHUD.SetActive(false);
         maxHealth = SetMaxHealthFromLevel();
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
@@ -44,6 +46,12 @@ public class PlayerStats : MonoBehaviour, IHittable
         {
             GameOver.Play();
             Debug.Log("RIP");
+            DeathHUD.SetActive(true);
+            Time.timeScale = 0f;
+            MainCamera.GetComponent<PlayerSee>().enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            WeaponHolder.GetComponent<WeaponSway>().enabled = false;
         }
 
 

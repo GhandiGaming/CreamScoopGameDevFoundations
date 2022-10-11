@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JedPlainsLevel/WaveTwo.unity
     guid: 479bfb6038393fc4283e9357448a6714
+  - enabled: 1
+    path: Assets/Scenes/JedPlainsLevel/WaveThree.unity
+    guid: 1ea13fa84d5b0884daf108e7ea230960
+  - enabled: 1
+    path: Assets/Scenes/JedPlainsLevel/WaveFour.unity
+    guid: cfe989a25a7a71e4c85ff89ac7c71183
+  - enabled: 1
+    path: Assets/Scenes/JedPlainsLevel/WaveFive.unity
+    guid: b122860d802b51d49b9aaaa8f3ac8b8a
+  - enabled: 1
+    path: Assets/Scenes/JedMenuScenes/GameWinScreen/GameWinScene.unity
+    guid: a68abeb05f4c0914bb66969d2ce60bc0
   m_configObjects: {}
