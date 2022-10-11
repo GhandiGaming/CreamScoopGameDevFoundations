@@ -9,7 +9,7 @@ public class AudioToggle : MonoBehaviour
     { 
         if (other.CompareTag("Player"))
         {
-            AudioManager.instance.SwapTrack(newTrack);
+            AudioBoss.instance.SwapTrack(newTrack);
         }
     }
 
@@ -17,7 +17,7 @@ public class AudioToggle : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            AudioManager.instance.ReturnToDefault();
+            AudioBoss.instance.ReturnToDefault();
         }
     }
 }

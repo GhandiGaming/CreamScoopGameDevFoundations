@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioBoss : MonoBehaviour
 {
     public AudioClip defaultAmbience;
 
     public AudioSource track01, track02;
     private bool isPlayingTrack01;
-    public static AudioManager instance;
+    public static AudioBoss instance;
 
     private void Awake()
     {
