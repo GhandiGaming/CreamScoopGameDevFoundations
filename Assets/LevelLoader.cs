@@ -7,7 +7,7 @@ public class LevelLoader : MonoBehaviour
 {
     // Reference to the animator used for the transition between scenes
     public Animator transition;
-
+    public GameObject ControlsScreen;
     // Reference to the time the system waits to load the next scene,
     // allows this wait time ot be changed in the inspector
     public float transitionTime = 1;
@@ -29,8 +29,21 @@ public class LevelLoader : MonoBehaviour
             LoadNextLevel();
 
         }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            ControlsScreen.SetActive(false);
+        }
     }
 
+    public void OpenControls()
+    {
+        ControlsScreen.SetActive(true);
+    }
+
+    public void EndGame()
+    {
+        Application.Quit();
+    }
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
