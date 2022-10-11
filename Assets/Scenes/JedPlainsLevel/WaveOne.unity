@@ -5334,6 +5334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElevatorPrompt
       objectReference: {fileID: 0}
+    - target: {fileID: 4237317006466162442, guid: 509266e897f1235419c1b8a58be38406, type: 3}
+      propertyPath: m_Text
+      value: Head back to the elevator.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 509266e897f1235419c1b8a58be38406, type: 3}
 --- !u!82 &4677574222791235525
