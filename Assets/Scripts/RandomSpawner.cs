@@ -10,7 +10,7 @@ public class RandomSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnNow", 7f, 1.5f);
+        InvokeRepeating("SpawnNow", 7f, 1.75f);
     }
 
     Vector3 getRandomPose()
