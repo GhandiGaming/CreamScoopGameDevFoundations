@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465766, g: 0.49641186, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657606, g: 0.49641138, b: 0.5748166, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4390,55 +4390,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222873425}
   m_CullTransparentMesh: 1
---- !u!1 &1241719825
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1241719827}
-  - component: {fileID: 1241719826}
-  m_Layer: 0
-  m_Name: MaintainAudioObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1241719826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241719825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a7c9f39d06d374ba9ae4019947987a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MasterAudio: []
-  MusicAudio:
-  - {fileID: 887506951}
-  SFXAudio:
-  - {fileID: 4677574223480691235}
-  - {fileID: 4677574223480691236}
---- !u!4 &1241719827
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241719825}
-  m_LocalRotation: {x: -0, y: -0, z: -0.6363363, w: 0.77141184}
-  m_LocalPosition: {x: 46.82694, y: 3.7793088, z: 44.527206}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 29
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -79.038}
 --- !u!114 &1255414757
 MonoBehaviour:
   m_ObjectHideFlags: 0
