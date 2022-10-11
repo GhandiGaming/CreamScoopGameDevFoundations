@@ -1082,7 +1082,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LDoorAnimator: {fileID: 995043938135214229}
+  DoorsOpen: 0
   DoorsOpening: 0
+  DoorsClosed: 0
+  DoorsClosedExit: 0
+  DoorsClosing: 0
 --- !u!1 &995043938141268574
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,6 +3198,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa8ed8e46732ed4083d94ce39197961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RDoorAnimator: {fileID: 0}
+  DoorsOpen: 0
+  DoorsOpening: 0
+  DoorsClosed: 0
+  DoorsClosedExit: 0
+  DoorsClosing: 0
 --- !u!1 &995043939231323510
 GameObject:
   m_ObjectHideFlags: 0
