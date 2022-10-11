@@ -7,16 +7,14 @@ public class AudioManager : MonoBehaviour
 {
     private static readonly string FirstPlay = "FirstPlay";
 
-    private static readonly string MasterPref = "MasterPref";
     private static readonly string MusicPref = "MusicPref";
     private static readonly string SFXPref = "SFXPref";
     
     private int firstPlayInt;
     
-    public Slider MasterVolumeSlider, SFXVolumeSlider, MusicVolumeSlider;
-    private float MasterVolumeFloat, SFXVolumeFloat, MusicVolumeFloat;
+    public Slider SFXVolumeSlider, MusicVolumeSlider;
+    private float SFXVolumeFloat, MusicVolumeFloat;
 
-    public AudioSource[] MasterAudio;
     public AudioSource[] MusicAudio;
     public AudioSource[] SFXAudio;
 
@@ -27,15 +25,12 @@ public class AudioManager : MonoBehaviour
 
         if (firstPlayInt == 0)
         {
-            MasterVolumeFloat = 1f;
             SFXVolumeFloat = .25f;
             MusicVolumeFloat = .75f;
 
-            MasterVolumeSlider.value = MasterVolumeFloat;
             MusicVolumeSlider.value = MusicVolumeFloat;
             SFXVolumeSlider.value = SFXVolumeFloat;
 
-            PlayerPrefs.SetFloat(MasterPref, MasterVolumeFloat);
             PlayerPrefs.SetFloat(MusicPref, MusicVolumeFloat);
             PlayerPrefs.SetFloat(SFXPref, SFXVolumeFloat);
 
@@ -43,9 +38,6 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            MasterVolumeFloat = PlayerPrefs.GetFloat(MasterPref);
-            MasterVolumeSlider.value = MasterVolumeFloat;
-
             MusicVolumeFloat = PlayerPrefs.GetFloat(MusicPref);
             MusicVolumeSlider.value = MusicVolumeFloat;
 
@@ -56,7 +48,6 @@ public class AudioManager : MonoBehaviour
 
     public void SaveSoundSettings()
     {
-        PlayerPrefs.SetFloat(MasterPref, MasterVolumeSlider.value);
         PlayerPrefs.SetFloat(MusicPref, MusicVolumeSlider.value);
         PlayerPrefs.SetFloat(SFXPref, SFXVolumeSlider.value);
     }
@@ -72,11 +63,6 @@ public class AudioManager : MonoBehaviour
 
     public void UpdateSound()
     {
-        for (int i = 0; i < MasterAudio.Length; i++)
-        {
-            MasterAudio[i].volume = MasterVolumeSlider.value;
-        }
-
         for (int i = 0; i < MusicAudio.Length; i++)
         {
             MusicAudio[i].volume = MusicVolumeSlider.value;

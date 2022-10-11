@@ -14,6 +14,7 @@ public class PauseMenuScript : MonoBehaviour
     public Canvas PauseMenuCanvas;
     public Canvas AudioMenuCanvas;
     public Canvas HUDCanvas;
+    public Canvas ElevatorPromptCanvas;
     public PlayerStats stats;
 
     void Start()
