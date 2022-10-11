@@ -49,11 +49,11 @@ MonoBehaviour:
     dropRarity: 5
   - name: 
     item: {fileID: 5547501785257256832, guid: 6653bb300e55cea4ab8d4c8fe50af0a1, type: 3}
-    dropRarity: 2
+    dropRarity: 1
   - name: 
     item: {fileID: 1785384540142227843, guid: 23ebd2776c1553244a7618b34e5c6806, type: 3}
     dropRarity: 2
   - name: 
     item: {fileID: 4659404174575585276, guid: 0dbcc42d81ebde44a9a9966c6feb8352, type: 3}
     dropRarity: 2
-  dropChance: 10
+  dropChance: 13

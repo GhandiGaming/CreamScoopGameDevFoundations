@@ -9,7 +9,10 @@ public class Hitbox : MonoBehaviour
     {
         
     }
-    public void OnCollisionEnter(Collision collision)
+
+    
+
+        public void OnCollisionEnter(Collision collision)
     {
         BossEnemy enemy = GetComponentInParent<BossEnemy>();
         int dmg = enemy.damage;
@@ -30,8 +33,5 @@ public class Hitbox : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

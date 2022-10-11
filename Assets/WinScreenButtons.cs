@@ -11,13 +11,5 @@ public class WinScreenButtons : MonoBehaviour
         SceneManager.LoadScene("PlainsMenuScene");
     }
 
-    public void LoadRetry()
-    {
-        SceneManager.LoadScene("PlainsMenuScene");
-    }
-
-    public void LoadAudioHUD()
-    {
-        
-    }
+    
 }

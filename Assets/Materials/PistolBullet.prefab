@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 541092e81ff58bb4682378bf20c662c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
+  damage: 20
   rb: {fileID: 1313913176897888896}
   explosion: {fileID: 0}
   whatIsEnemies:
